@@ -33,9 +33,12 @@ jobs:
             #apt-get install libcurl3 php5-curl
             #apt-get install curl -y
             #pip install --upgrade pip setuptools wheel 
-            python -m virtualenv flask
-            source flask/bin/activate
-            pip install flask
+            #python -m virtualenv flask
+            #source flask/bin/activate
+            #pip install flask
+            #pip install -r requirements.txt
+             python3 -m venv venv
+            . venv/bin/activate
             pip install -r requirements.txt
             #bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
             bash <(curl -s https://scripts.scantist.com/staging/ci-circle-jar.sh)
